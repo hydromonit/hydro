@@ -20,6 +20,7 @@
 		"husky": "^9.1.7"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "^5.90.21",
 		"dotenv-cli": "^11.0.0"
 	}
 }

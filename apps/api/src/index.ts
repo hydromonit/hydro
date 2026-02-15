@@ -1,9 +1,12 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { loginUser, logoutUser, registerUser } from "./controllers/auth";
 import { authMiddleware } from "./middleware/auth";
 
 const app = new Hono();
+
+app.use("/*", cors());
 
 app.post("/auth/register", registerUser);
 app.post("/auth/login", loginUser);
