@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
-import { removeToken } from "@/utils/storage";
+import { authApi, removeToken } from "@/services/api";
 import toast from "react-hot-toast";
 
 export const useLogout = () => {
