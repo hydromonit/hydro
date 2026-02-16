@@ -1,7 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
-export const Route = createFileRoute("/")({ component: App });
+import { createFileRoute, redirect } from "@tanstack/react-router";
+import { getToken } from "@/utils/storage";
 
-function App() {
+export const Route = createFileRoute("/")({
+	beforeLoad: () => {
+		const token = getToken();
+		if (!token) {
+			throw redirect({ to: "/login" });
+		}
+	},
+	component: Dashboard,
+});
+
+function Dashboard() {
 	return (
 		<div>
 			<header>This the header!</header>
