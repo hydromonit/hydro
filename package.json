@@ -21,6 +21,7 @@
 	},
 	"dependencies": {
 		"@tanstack/react-query": "^5.90.21",
-		"dotenv-cli": "^11.0.0"
+		"dotenv-cli": "^11.0.0",
+		"zod": "^4.3.6"
 	}
 }
