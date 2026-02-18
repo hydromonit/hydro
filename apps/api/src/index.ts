@@ -1,13 +1,14 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
+import { createDailyLog } from "./controllers/log-controller";
 
 const app = new Hono();
 
-console.log("ENV", process.env.TEST);
+// Daftarkan endpoint POST sebagai rute RPC
+const routes = app.post("/logs", createDailyLog);
 
-app.get("/", (c) => {
-	return c.text("Hello API!");
-});
+// Export tipe untuk digunakan di Frontend (Pola RPC)
+export type AppRouteType = typeof routes;
 
 serve(
 	{
@@ -18,3 +19,5 @@ serve(
 		console.log(`Server is running on http://localhost:${info.port}`);
 	},
 );
+
+export default app;
