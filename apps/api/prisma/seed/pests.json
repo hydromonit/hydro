@@ -1,0 +1,62 @@
+[
+	{
+		"id": 1,
+		"name": "Kutu Daun (Aphid)",
+		"category": "pest",
+		"description": "Serangga kecil hijau/hitam yang menghisap cairan tanaman. Gejala: daun keriting, pertumbuhan terhambat."
+	},
+	{
+		"id": 2,
+		"name": "Thrips",
+		"category": "pest",
+		"description": "Serangga kecil yang meninggalkan bercak perak pada daun. Gejala: daun berbintik, warna pucat."
+	},
+	{
+		"id": 3,
+		"name": "Tungau (Spider Mite)",
+		"category": "pest",
+		"description": "Hama kecil seperti laba-laba. Gejala: bintik kuning pada daun, jaring halus."
+	},
+	{
+		"id": 4,
+		"name": "Ulat",
+		"category": "pest",
+		"description": "Larva kupu-kupu/ngengat yang memakan daun. Gejala: lubang pada daun, kotoran hitam."
+	},
+	{
+		"id": 5,
+		"name": "Whitefly",
+		"category": "pest",
+		"description": "Serangga putih kecil di bawah daun. Gejala: daun menguning, embun madu lengket."
+	},
+	{
+		"id": 6,
+		"name": "Busuk Akar (Root Rot)",
+		"category": "disease",
+		"description": "Infeksi jamur pada akar. Gejala: akar coklat/hitam, bau busuk, tanaman layu."
+	},
+	{
+		"id": 7,
+		"name": "Powdery Mildew",
+		"category": "disease",
+		"description": "Jamur putih seperti tepung. Gejala: lapisan putih pada daun."
+	},
+	{
+		"id": 8,
+		"name": "Layu Fusarium",
+		"category": "disease",
+		"description": "Infeksi jamur sistemik. Gejala: tanaman layu meski air cukup, daun menguning dari bawah."
+	},
+	{
+		"id": 9,
+		"name": "Busuk Batang",
+		"category": "disease",
+		"description": "Infeksi pada batang. Gejala: batang lunak, berlendir, berwarna gelap."
+	},
+	{
+		"id": 10,
+		"name": "Defisiensi Nutrisi",
+		"category": "disease",
+		"description": "Kekurangan nutrisi tertentu. Gejala: daun kuning, pertumbuhan lambat."
+	}
+]

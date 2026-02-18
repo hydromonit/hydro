@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"name": "Neem Oil",
+		"category": "organic",
+		"description": "Minyak mimba, efektif untuk berbagai hama. Campurkan 5ml/liter air, semprot pagi/sore."
+	},
+	{
+		"id": 2,
+		"name": "Sabun Insektisida",
+		"category": "organic",
+		"description": "Sabun khusus serangga. Campurkan sesuai label, semprot langsung ke hama."
+	},
+	{
+		"id": 3,
+		"name": "Bawang Putih Spray",
+		"category": "organic",
+		"description": "Larutan bawang putih. Haluskan 5 siung + 1 liter air, saring, semprot."
+	},
+	{
+		"id": 4,
+		"name": "Pyrethrin",
+		"category": "insecticide",
+		"description": "Insektisida dari bunga krisan. Ikuti dosis pada label produk."
+	},
+	{
+		"id": 5,
+		"name": "Imidacloprid",
+		"category": "insecticide",
+		"description": "Insektisida sistemik. Gunakan sesuai dosis, hindari menjelang panen."
+	},
+	{
+		"id": 6,
+		"name": "Fungisida Sistemik",
+		"category": "fungicide",
+		"description": "Fungisida yang diserap tanaman. Ikuti dosis label, aplikasi berkala."
+	},
+	{
+		"id": 7,
+		"name": "Copper-based Fungicide",
+		"category": "fungicide",
+		"description": "Fungisida berbasis tembaga. Efektif untuk jamur, jangan overdosis."
+	},
+	{
+		"id": 8,
+		"name": "Trichoderma",
+		"category": "organic",
+		"description": "Jamur antagonis. Aplikasikan ke akar untuk mencegah busuk akar."
+	},
+	{
+		"id": 9,
+		"name": "Potong Bagian Terinfeksi",
+		"category": "other",
+		"description": "Buang daun/bagian yang terinfeksi. Sterilkan alat potong dengan alkohol."
+	},
+	{
+		"id": 10,
+		"name": "Ganti Air & Bersihkan Sistem",
+		"category": "other",
+		"description": "Kuras air, bersihkan wadah dan pipa dengan H2O2 atau bleach encer."
+	},
+	{
+		"id": 11,
+		"name": "Karantina Tanaman",
+		"category": "other",
+		"description": "Pisahkan tanaman yang terinfeksi dari yang sehat untuk mencegah penyebaran."
+	}
+]

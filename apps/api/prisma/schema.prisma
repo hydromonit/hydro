@@ -6,3 +6,104 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+enum CategoryPest {
+  PEST
+  DISEASE
+}
+
+model PestType {
+  id                           String                        @id @default(uuid())
+  name                         String                        @unique
+  category                     CategoryPest
+  description                  String?                       @db.Text
+  pestTreatmentRecommendations PestTreatmentRecommendation[]
+  pestIncidents                PestIncident[]
+
+  @@map("pest_types")
+}
+
+enum CategoryTreatment {
+  INSECTICIDE
+  FUNGICIDE
+  ORGANIC
+  OTHER
+}
+
+model TreatmentType {
+  id                           String                        @id @default(uuid())
+  name                         String                        @unique
+  category                     String
+  description                  String?                       @db.Text
+  pestTreatmentRecommendations PestTreatmentRecommendation[]
+  treatmentLogs                TreatmentLog[]
+
+  @@map("treatment_types")
+}
+
+model PestTreatmentRecommendation {
+  id                String  @id @default(uuid())
+  pest_type_id      String
+  treatment_type_id String
+  priority          Int // Scale of 1 for highest priority to 5 for lowest
+  effectiveness     Int // Scale of 1-10
+  notes             String? @db.Text
+
+  pestType      PestType      @relation(fields: [pest_type_id], references: [id])
+  treatmentType TreatmentType @relation(fields: [treatment_type_id], references: [id])
+
+  @@map("pest_treatment_recommendations")
+}
+
+enum Status {
+  ONGOING
+  RESOLVED
+  UNRESOLVED
+}
+
+enum Severity {
+  MILD
+  MODERATE
+  SEVERE
+}
+
+model PestIncident {
+  id             String    @id @default(uuid())
+  batch_id       String
+  pest_type_id   String
+  detected_date  DateTime
+  resolved_date  DateTime?
+  status         Status?
+  severity       Severity?
+  affected_count Int?
+  notes          String?   @db.Text
+  image_url      String?
+
+  pestType      PestType       @relation(fields: [pest_type_id], references: [id])
+  treatmentLogs TreatmentLog[]
+
+  @@map("pest_incidents")
+}
+
+enum Effectiveness {
+  EFFECTIVE
+  INEFFECTIVE
+  PENDING
+  PARTIAL
+}
+
+model TreatmentLog {
+  id                  String         @id @default(uuid())
+  pest_incident_id    String
+  treatment_type_id   String
+  treatment_date      DateTime
+  dosage              String?
+  notes               String?        @db.Text
+  image_url           String?
+  effectiveness       Effectiveness? @default(PENDING)
+  next_treatment_date DateTime?
+  pestIncident        PestIncident   @relation(fields: [pest_incident_id], references: [id])
+  treatmentType       TreatmentType  @relation(fields: [treatment_type_id], references: [id])
+
+  @@map("treatment_logs")
+}

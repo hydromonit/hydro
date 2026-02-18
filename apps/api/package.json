@@ -7,15 +7,22 @@
 		"start": "node dist/index.js",
 		"with-env": "dotenv -e ../../.env --",
 		"db:migrate": "pnpm prisma migrate dev",
-		"db:generate": "pnpm prisma generate"
+		"db:generate": "pnpm prisma generate",
+		"db:studio": "pnpm prisma studio",
+		"db:seed:pest": "pnpm with-env tsx prisma/seed/seed-pests.ts",
+		"db:seed:treatment": "pnpm with-env tsx prisma/seed/seed-treatments.ts"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.19.9",
+		"@hono/zod-validator": "^0.7.6",
 		"@prisma/adapter-pg": "^7.3.0",
 		"@prisma/client": "^7.3.0",
+		"@types/jsonwebtoken": "^9.0.10",
 		"dotenv": "^17.2.4",
 		"hono": "^4.11.7",
-		"prisma": "^7.3.0"
+		"jsonwebtoken": "^9.0.3",
+		"prisma": "^7.3.0",
+		"zod": "^4.3.6"
 	},
 	"devDependencies": {
 		"@types/node": "^20.11.17",

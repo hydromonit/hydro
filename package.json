@@ -7,10 +7,16 @@
 		"admin:dev": "pnpm --filter=admin run dev",
 		"platform:dev": "pnpm --filter=platform run dev",
 		"api:dev": "pnpm --filter=api run dev",
-		"dev": "pnpm --parallel --filter=admin -filter=platform -filter=api --filter=@feedbase/ui run dev",
+		"dev": "pnpm --parallel --filter=admin --filter=platform --filter=api run dev",
 		"lint": "pnpm exec biome check",
 		"lint:fix": "pnpm exec biome check --write --unsafe",
-		"prepare": "husky"
+		"prepare": "husky",
+		"db:init": "pnpm --filter=api prisma db push",
+		"db:migrate": "pnpm --filter=api run db:migrate",
+		"db:generate": "pnpm --filter=api run db:generate",
+		"db:studio": "pnpm --filter=api run db:studio",
+		"db:seed:pest": "pnpm --filter=api run db:seed:pest",
+		"db:seed:treatment": "pnpm --filter=api run db:seed:treatment"
 	},
 	"keywords": [],
 	"author": "",
