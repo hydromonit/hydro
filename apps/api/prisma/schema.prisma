@@ -6,3 +6,14 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model DailyLog {
+  id        Int      @id @default(autoincrement())
+  batchId   Int      
+  logDate   DateTime @default(now()) 
+  phLevel   Float    
+  ppmLevel  Int      
+  waterTemp Float    
+  notes     String?
+  imageUrl  String?  
+}
